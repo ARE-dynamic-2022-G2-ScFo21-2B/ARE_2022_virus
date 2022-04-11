@@ -20,4 +20,10 @@ disparaître complètement au sein de la population.
  ## Expériences et résultats
  
  ## Conclusion
+ 
+ ## Prérequis
+ - Python 3
+ - Pygame
+ - Matplotlib
+ - Datetime
 
