@@ -35,6 +35,11 @@ disparaître complètement au sein de la population.
  
  ## Conclusion
  
+ ## Souces principales
+- A., Galvani, et May R. « Comment se propage une épidémie ». Revue Francophone 	des Laboratoires, vol. 2006, no 379, février 2006, p. 16‑17. ScienceDirect, 		https://doi.org/10.1016/S1773-035X(06)80075-4.
+
+- KOLAYE, Gabriel Guilsou, et al. Modélisation et simulation multi-agent de la 		propagation d’une épidémie de choléra: cas de la ville de Ngaoundéré. janvier 		2020. HAL Archives Ouvertes, https://hal.archives-ouvertes.fr/hal-02460282. 
+ 
  ## Prérequis
  - Python 3
  - Pygame
