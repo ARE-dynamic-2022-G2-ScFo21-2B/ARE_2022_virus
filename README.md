@@ -38,49 +38,61 @@ disparaître complètement au sein de la population.
  Population: 400
  Taux de contagiosité: 100%
  Taux de mortalité: 100%
+ 
 <img src="https://user-images.githubusercontent.com/50793868/163190353-59bbb477-7b5c-4215-a285-2596c69e05eb.png" height="384" width="512">
 <img src="https://user-images.githubusercontent.com/50793868/163190361-6ee696f9-a411-4937-b628-3150695e18cc.png" height="384" width="512">
+
  Toute la population a disparu.
 
  #Test 2
  Population: 400
  Taux de contagiosité: 100%
  Taux de mortalité: 30%
-<img src="https://user-images.githubusercontent.com/50793868/163190362-730624fe-d2b2-4f41-831c-81df1ccedd1d.png" height="384" width="512">
-<img src="https://user-images.githubusercontent.com/50793868/163190365-db659680-c114-46bc-aca0-fa4cc96385e0.png" height="384" width="512">
-Toute la population a disparu.
+ 
+ <img src="https://user-images.githubusercontent.com/50793868/163190362-730624fe-d2b2-4f41-831c-81df1ccedd1d.png" height="384" width="512">
+ <img src="https://user-images.githubusercontent.com/50793868/163190365-db659680-c114-46bc-aca0-fa4cc96385e0.png" height="384" width="512">
+ 
+ Toute la population a disparu.
 
  #Test 3
  Population: 400
  Taux de contagiosité: 60%
  Taux de mortalité: 30%
-<img src="https://user-images.githubusercontent.com/50793868/163190367-96ce27c0-e957-4ed5-a3e8-206af76ac38e.png" height="384" width="512">
-<img src="https://user-images.githubusercontent.com/50793868/163190370-c8de16e1-f201-45c9-a312-0ec37538d817.png" height="384" width="512">
-Nombre de survivants: 16
+ 
+ <img src="https://user-images.githubusercontent.com/50793868/163190367-96ce27c0-e957-4ed5-a3e8-206af76ac38e.png" height="384" width="512">
+ <img src="https://user-images.githubusercontent.com/50793868/163190370-c8de16e1-f201-45c9-a312-0ec37538d817.png" height="384" width="512">
+
+ Nombre de survivants: 16
 
  #Test 4
  Population: 400
  Taux de contagiosité: 20%
  Taux de mortalité: 80%
-<img src="https://user-images.githubusercontent.com/50793868/163190375-e6e99df8-827e-433e-84a0-baa7effcd095.png" height="384" width="512">
-<img src="https://user-images.githubusercontent.com/50793868/163190378-52e34913-c64a-4a5b-995c-222e37b156a7.png" height="384" width="512">
-Nombre de survivants: 21
+ 
+ <img src="https://user-images.githubusercontent.com/50793868/163190375-e6e99df8-827e-433e-84a0-baa7effcd095.png" height="384" width="512">
+ <img src="https://user-images.githubusercontent.com/50793868/163190378-52e34913-c64a-4a5b-995c-222e37b156a7.png" height="384" width="512">
+ 
+ Nombre de survivants: 21
 
  #Test 5
  Population: 400
  Taux de contagiosité: 50%
  Taux de mortalité: 50%
+ 
 <img src="https://user-images.githubusercontent.com/50793868/163190382-310c1e79-52d0-4a05-8f8f-72876ee89c11.png" height="384" width="512">
 <img src="https://user-images.githubusercontent.com/50793868/163190388-7f87bf37-c42e-4ba0-b046-031d8d6e175a.png" height="384" width="512">
-Nombre de survivants: 15
+
+ Nombre de survivants: 15
 
  #Test 3
  Population: 400
  Taux de contagiosité: 90%
  Taux de mortalité: 30%
-<img src="https://user-images.githubusercontent.com/50793868/163190389-db7377db-8d03-441e-af90-78e5419e3d8d.png" height="384" width="512">
-<img src="https://user-images.githubusercontent.com/50793868/163190392-033aeaf5-b1bd-4f1b-81ad-3b8a02430389.png" height="384" width="512">
-Nombre de survivants: 28
+ 
+ <img src="https://user-images.githubusercontent.com/50793868/163190389-db7377db-8d03-441e-af90-78e5419e3d8d.png" height="384" width="512">
+ <img src="https://user-images.githubusercontent.com/50793868/163190392-033aeaf5-b1bd-4f1b-81ad-3b8a02430389.png" height="384" width="512">
+
+ Nombre de survivants: 28
 
 Interprétation de ces résultats: Nous pouvons déjà observer que lorsque le taux de contagiosité est à son maximum (100%), toute
 la population en vient à disparaître, que le virus soit très mortel (100%) ou moins mortel (30%).
