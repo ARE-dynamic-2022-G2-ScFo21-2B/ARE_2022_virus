@@ -32,7 +32,19 @@ disparaître complètement au sein de la population.
 
  
  ## Expériences et résultats
- 
+ ![test_1_a](https://user-images.githubusercontent.com/50793868/163190353-59bbb477-7b5c-4215-a285-2596c69e05eb.png)
+![test_1_b](https://user-images.githubusercontent.com/50793868/163190361-6ee696f9-a411-4937-b628-3150695e18cc.png)
+![test_2_a](https://user-images.githubusercontent.com/50793868/163190362-730624fe-d2b2-4f41-831c-81df1ccedd1d.png)
+![test_2_b](https://user-images.githubusercontent.com/50793868/163190365-db659680-c114-46bc-aca0-fa4cc96385e0.png)
+![test_3_a](https://user-images.githubusercontent.com/50793868/163190367-96ce27c0-e957-4ed5-a3e8-206af76ac38e.png)
+![test_3_b](https://user-images.githubusercontent.com/50793868/163190370-c8de16e1-f201-45c9-a312-0ec37538d817.png)
+![test_4_a](https://user-images.githubusercontent.com/50793868/163190375-e6e99df8-827e-433e-84a0-baa7effcd095.png)
+![test_4_b](https://user-images.githubusercontent.com/50793868/163190378-52e34913-c64a-4a5b-995c-222e37b156a7.png)
+![test_5_a](https://user-images.githubusercontent.com/50793868/163190382-310c1e79-52d0-4a05-8f8f-72876ee89c11.png)
+![test_5_b](https://user-images.githubusercontent.com/50793868/163190388-7f87bf37-c42e-4ba0-b046-031d8d6e175a.png)
+![test_6_a](https://user-images.githubusercontent.com/50793868/163190389-db7377db-8d03-441e-af90-78e5419e3d8d.png)
+![test_6_b](https://user-images.githubusercontent.com/50793868/163190392-033aeaf5-b1bd-4f1b-81ad-3b8a02430389.png)
+
  ## Conclusion
  
  ## Souces principales
