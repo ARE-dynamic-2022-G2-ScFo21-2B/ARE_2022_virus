@@ -34,10 +34,10 @@ disparaître complètement au sein de la population.
  ## Expériences et résultats
  Pour répondre à notre problématique, nous avons réalisé diverses expériences grâce à notre système de simulation.
 
- - Test 1
- Population: 400
- Taux de contagiosité: 100%
- Taux de mortalité: 100%
+ - Test 1<br/>
+ Population: 400<br/>
+ Taux de contagiosité: 100%<br/>
+ Taux de mortalité: 100%<br/>
  
 <img src="https://user-images.githubusercontent.com/50793868/163190353-59bbb477-7b5c-4215-a285-2596c69e05eb.png" height="384" width="512">
 <img src="https://user-images.githubusercontent.com/50793868/163190361-6ee696f9-a411-4937-b628-3150695e18cc.png" height="384" width="512">
