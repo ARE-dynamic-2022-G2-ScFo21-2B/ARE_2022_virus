@@ -152,6 +152,7 @@ def mortalite():
             if(i["infection"] == 0):
                 #Diminution du temps d'infection restant
                 cpt_infecte -= 1
+                cpt_immunite -= 1
     nbre_morts.append(compteur_morts/NB_POPULATION)
         
 
