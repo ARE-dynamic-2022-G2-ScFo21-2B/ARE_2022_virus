@@ -1,7 +1,7 @@
 # Virus
 
 ## Introduction et Bibliographie
-Aujourd’hui, les virus sont très présents dans notre société, l’exemple le plus marquant reste celui de la covid-19. Ceux-ci se développent dans une société selon divers critères tels que le taux de contagion, le taux de mortalité, le nombre de personnes dans la population …
+Aujourd’hui, les virus sont très présents dans notre société, l’exemple le plus marquant reste celui de la covid-19. Ceux-ci se développent dans une société selon divers critères tels que le taux de contagion, le taux de mortalité, le nombre de personnes dans la population…
 Nous avons donc cherché, au cours de ce travail, à modéliser la propagation d’un virus dit lambda.
 
 Notre projet a été créé de façon à ce que chaque expérience dépende de paramètres principaux :
@@ -33,7 +33,7 @@ disparaître complètement au sein de la population.
  
  ## Expériences et résultats
  Pour répondre à notre problématique, nous avons réalisé diverses expériences grâce à notre outil de simulation.
- Chaque expérience est accompagnée de deux graphes, l'un représente le taux d'individus contaminés et le taux d'individus immunisés en fonction du temps,  et l'autre représente la proportion d'individus qui meurent par rapport au nombre d'individus restant au sein de la population en fonction du temps.  
+ Chaque expérience est accompagnée de deux graphes, l'un représente le taux d'individus contaminés et le taux d'individus immunisés en fonction du temps en seconde,  et l'autre représente la proportion d'individus qui meurent par rapport au nombre d'individus restant au sein de la population en fonction du temps en seconde.  
 
  - Test 1<br/>
  Population: 400<br/>
