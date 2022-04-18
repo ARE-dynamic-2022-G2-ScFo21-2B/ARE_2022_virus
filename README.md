@@ -33,6 +33,7 @@ disparaître complètement au sein de la population.
  
  ## Expériences et résultats
  Pour répondre à notre problématique, nous avons réalisé diverses expériences grâce à notre outil de simulation.
+ Chaque expérience est accompagnée de deux graphes, l'un représente le taux d'individus contaminés et le taux d'individus immunisés en fonction du temps,  et l'autre représente la proportion d'individus qui meurent par rapport au nombre d'individus restant au sein de la population en fonction du temps.  
 
  - Test 1<br/>
  Population: 400<br/>
