@@ -50,10 +50,10 @@ disparaître complètement au sein de la population.
  Taux de contagion: 100%<br/>
  Taux de mortalité: 30%<br/>
  
- <img src="https://user-images.githubusercontent.com/50793868/163190362-730624fe-d2b2-4f41-831c-81df1ccedd1d.png" height="384" width="512">
- <img src="https://user-images.githubusercontent.com/50793868/163190365-db659680-c114-46bc-aca0-fa4cc96385e0.png" height="384" width="512">
- 
- Toute la population a disparu.
+ <img src="https://user-images.githubusercontent.com/50793868/163810946-af0bac5b-d9c8-40f0-be6c-857206660632.png" height="384" width="512">
+ <img src="https://user-images.githubusercontent.com/50793868/163810951-96bbd966-4e01-4d5b-8939-b3dcfd4ea3d9.png" height="384" width="512">
+
+ Nombre de survivants: 12
 
  - Test 3<br/>
  Population: 400<br/>
@@ -94,10 +94,23 @@ disparaître complètement au sein de la population.
  <img src="https://user-images.githubusercontent.com/50793868/163190392-033aeaf5-b1bd-4f1b-81ad-3b8a02430389.png" height="384" width="512">
 
  Nombre de survivants: 28
+ 
+  - Test 7<br/>
+ Population: 400<br/>
+ Taux de contagion: 90%<br/>
+ Taux de mortalité: 90%<br/>
+ 
+ <img src="https://user-images.githubusercontent.com/50793868/163811698-51125d09-e7bf-4762-8898-fe4f3d229ae5.png" height="384" width="512">
+ <img src="https://user-images.githubusercontent.com/50793868/163811700-919e2546-1f08-4223-9122-8e9a6a4f7fbe.png" height="384" width="512">
+
+ Nombre de survivants: 11
 
 Interprétation de ces résultats: <br/>
-Nous pouvons déjà observer que lorsque le taux de contagion est à son maximum (100%), toute
-la population en vient à disparaître, que le virus soit très mortel (100%) ou moins mortel (30%).<br/>
+Nous pouvons déjà observer grâce au test 1 que lorsque le taux de contagion est à son maximum (100%), toute
+la population en vient à disparaître si le virus systématiquement mortel (100% de taux de mortalité).
+Le test 2 permet de remarquer que lorsque l'on diminue le taux de mortalité (30%), même si les contaminations
+sont systématiques lorsque deux agents entrent en contact, le virus finit par
+disparaître de lui même.<br/>
 Sur les test 3 et 4, nous avons diminué le taux de mortalité, respectivement à 30% et 80% en faisant également varier
 le taux de contagion (60% puis 20%). Nous pouvons alors observé que dans le cas d'un faible taux de mortalité et 
 d'un fort taux de contagion, ainsi que dans le cas d'un fort taux de mortalité et d'un faible taux de contagion,
@@ -105,14 +118,17 @@ le virus en vient à disparaître de lui-même, avant d'avoir éliminé la total
 On peut également noter que le temps avant disparition du virus et bien plus élevé (de l'ordre du double) dans le test 4 que dans le test 3.<br/>
 Pour le test 5, nous avons réalisé une simulation équilibrée (50% de taux de contagion, 50% de taux de mortalité), et nous
 avons également pu observer que le virus en vient à disparaître de lui-même, après plusieurs vagues épidémiques.<br/>
-Enfin, le test 6 permet de montrer que lorsque le taux de contagion est extrêmement élevé (90%) mais que le taux de mortalité
+Le test 6 permet de montrer que lorsque le taux de contagion est extrêmement élevé (90%) mais que le taux de mortalité
 est bien moins important (30%), le virus disparaît de lui même très rapidement (en l'occurence après une seule vague).
+Enfin, lors du test 7, nous avons réalisé une simulation avec un taux de contagion et un taux de mortalité très
+élevé (90% pour les deux), afin de vérifier la seconde hypothèse.
 
  ## Conclusion
- Nous pouvons alors invalider la première hypothèse, qui dit que le virus en vient à disparaître lorsque le taux de contagion est très
- élevé. En effet, nous avons remarqué que pour un taux de mortalité à son maximum (100%), comme pour un taux beaucoup plus bas (30%), toute la
- population a disparu à la fin de la simulation. En revanche, le deuxième hypothèse peut être considérée comme validée, cas nous
- avons observé que dans toutes les autres situations, le virus en est venu à disparaître complètement avant que toute la population n'ait disparu.
+ Nous pouvons alors valider la première hypothèse, qui affirmait que le virus en viendrait à disparaître si le taux de contagion
+ était très élevé et le taux de mortalité faible, car le seul cas où le virus a éliminé l'entiereté de la population est lors
+ du test 1 (100% de mortalité). Dans tous les autres cas (où le taux de mortalité était plus faible), le virus a disparu.
+ Nous pouvons également valider la seconde hypothèse grâce au test 7, où nous avons remarqué que 12 personnes ont survécu
+ au virus malgré un taux de contagion et de mortalité très élevé.
  
  
  ## Souces principales
