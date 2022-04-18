@@ -24,7 +24,8 @@ TEMPS_IMMUNITE_MAX = 25
 
 #Paramètres de la simulation
 SIMULATION = True   #Activer ou non la simulation visuelle
-AFFICHER_LEGENDE = True   # Variable permettant d'afficher ou non la légende
+AFFICHER_LEGENDE = True   #Variable permettant d'afficher ou non la légende
+AFFICHER_GRAPHIQUES = True   #Afficher ou non les graphiques à la fin de la simulation
 MOYENNE = 5     #Echelle de la moyenne pour les courbes
 VITESSE = 1     #Experimental, vitesse de la simulation
 
@@ -278,43 +279,44 @@ def main():
     
 
     #Fin: Affichage des graphiques
-    nbre_morts_moyenne = []
-    nbre_infectes_moyenne = []
-    nbre_immunises_moyenne = []
-    cpt = 0
-    cumul_mort = 0
-    cumul_immunite = 0
-    cumul_infection = 0
+    if(AFFICHER_GRAPHIQUES):
+        nbre_morts_moyenne = []
+        nbre_infectes_moyenne = []
+        nbre_immunises_moyenne = []
+        cpt = 0
+        cumul_mort = 0
+        cumul_immunite = 0
+        cumul_infection = 0
 
-    for i in range(len(nbre_morts)):
-        if cpt < MOYENNE:
-            cpt += 1
-            cumul_mort += nbre_morts[i]
-            cumul_immunite += nbre_immunises[i]
-            cumul_infection += nbre_infectes[i]
-        else:
+        for i in range(len(nbre_morts)):
+            if cpt < MOYENNE:
+                cpt += 1
+                cumul_mort += nbre_morts[i]
+                cumul_immunite += nbre_immunises[i]
+                cumul_infection += nbre_infectes[i]
+            else:
+                nbre_morts_moyenne.append(cumul_mort/cpt)
+                nbre_infectes_moyenne.append(cumul_infection/cpt)
+                nbre_immunises_moyenne.append(cumul_immunite/cpt)
+                cpt = 0
+                cumul_mort = 0
+                cumul_immunite = 0
+                cumul_infection = 0
+        if(cpt > 0):
             nbre_morts_moyenne.append(cumul_mort/cpt)
             nbre_infectes_moyenne.append(cumul_infection/cpt)
             nbre_immunises_moyenne.append(cumul_immunite/cpt)
-            cpt = 0
-            cumul_mort = 0
-            cumul_immunite = 0
-            cumul_infection = 0
-    if(cpt > 0):
-        nbre_morts_moyenne.append(cumul_mort/cpt)
-        nbre_infectes_moyenne.append(cumul_infection/cpt)
-        nbre_immunises_moyenne.append(cumul_immunite/cpt)
 
-    #Courbe morts
-    plt.plot([i * MOYENNE for i in range(len(nbre_immunises_moyenne))], nbre_immunises_moyenne, color="green")
+        #Courbe morts
+        plt.plot([i * MOYENNE for i in range(len(nbre_immunises_moyenne))], nbre_immunises_moyenne, color="green")
 
-    #Courbe nbre infectes
-    plt.plot([i * MOYENNE for i in range(len(nbre_infectes_moyenne))], nbre_infectes_moyenne, color="red")
-    plt.show()
+        #Courbe nbre infectes
+        plt.plot([i * MOYENNE for i in range(len(nbre_infectes_moyenne))], nbre_infectes_moyenne, color="red")
+        plt.show()
 
-    #Courbe nbre immunisés
-    plt.plot([i * MOYENNE for i in range(len(nbre_morts_moyenne))], nbre_morts_moyenne, color="black")
-    plt.show()
+        #Courbe nbre immunisés
+        plt.plot([i * MOYENNE for i in range(len(nbre_morts_moyenne))], nbre_morts_moyenne, color="black")
+        plt.show()
 
     print("Simulation terminée.")
 
