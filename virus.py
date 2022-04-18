@@ -7,8 +7,8 @@ pygame.init()
 WINDOW_RESOLUTION = (900, 900)
 NB_POPULATION = 400
 
-TAUX_MORTALITE = 70
-TAUX_INFECTION = 20
+TAUX_MORTALITE = 90
+TAUX_INFECTION = 70
 
 
 TEMPS_INFECTION_MAX = 25
@@ -20,6 +20,7 @@ DISTANCE_CONTAMINATION = 50
 
 
 nb_mort = 0
+nb_infecte = NOMBRE_INFECTE_DEBUT
 screen = pygame.display.set_mode(WINDOW_RESOLUTION)
 pygame.display.set_caption("Propagation épidémie")
 power = True
@@ -53,7 +54,7 @@ def creation_agent():
 def distance(agent1, agent2):
     return sqrt((agent1['x'] - agent2['x'])**2 + (agent1['y'] - agent2['y'])**2)
 
-# Fonction permettant d'initialiser la population avec NB_POPUATION agents
+# Fonction permettant d'initialiser la population avec NB_POPULATION agents
 def initialisation_population():
     dico = {}
     for i in range(NB_POPULATION):
@@ -63,6 +64,7 @@ def initialisation_population():
         n = random.randint(0, NB_POPULATION-1)
         liste_agents[n]["infection"] = random.randint(5, TEMPS_INFECTION_MAX)
         liste_agents[n]["immunite"] = random.randint(5, TEMPS_IMMUNITE_MAX)
+        liste_agents[n]["test_mortalite"] = 1
 
 # Fonction permettant de modifier les coordonnées selon un mouvement prédéfini
 def modifier_coordonnees():
@@ -90,15 +92,17 @@ def contamination():
                         j["infection"] = random.randint(5, TEMPS_INFECTION_MAX)
                         j["immunite"] = random.randint(5, TEMPS_IMMUNITE_MAX)
                         j["test_mortalite"] = 1
-            i["infection"] -= 1
         if ((i["infection"] == 0) and (i["immunite"] > 0)):
             i["immunite"] -= 1
 
 # Fonction gérant la mortalité
 def mortalite():
-    global nb_mort
+    global nb_mort, NB_POPULATION, nb_infecte
+    nb_infecte = 0
     for i in liste_agents:
        if i["infection"] > 0:
+            nb_infecte += 1
+            i["infection"] -= 1
             if i["test_mortalite"] == 1:
                 n = random.randint(1, i["infection"])
                 if (n == 1):
@@ -106,8 +110,10 @@ def mortalite():
                     p = random.randint(1, 100)
                     if p <= TAUX_MORTALITE:
                         liste_agents.remove(i)
+                        NB_POPULATION -= 1
                         nb_mort += 1
                         print(nb_mort)
+        
 
             
 
@@ -127,7 +133,6 @@ def actualisation():
     screen.fill(blanc)
     if ((int(datetime.now().strftime("%S")) - seconde >= 1) or (int(datetime.now().strftime("%S")) - seconde < 0)):
         seconde = int(datetime.now().strftime("%S"))
-        print("test")
         contamination()
         mortalite()
     modifier_coordonnees()
@@ -141,11 +146,24 @@ def actualisation():
             point_couleur = bleu
         pygame.draw.circle(screen, point_couleur, (int(liste_x[i]), int(liste_y[i])), 5)
 
+def test_fin():
+    global nb_mort, nb_infecte
+    if NB_POPULATION == 0:
+        print("Toute la population est morte")
+        print(f"Nombre de morts: {nb_mort}")
+        return 0
+    if nb_infecte == 0:
+        print("Le virus a disparu")
+        print(f"Nombre de survivant: {NB_POPULATION}")
+        return 0
+    return 1
+
 def main():
     global power
     initialisation_population()
     while power:
         actualisation()
+        power = test_fin()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 power = False
