@@ -100,8 +100,8 @@ disparaître complètement au sein de la population.
  Taux de contagion: 90%<br/>
  Taux de mortalité: 90%<br/>
  
- <img src="https://user-images.githubusercontent.com/50793868/163811698-51125d09-e7bf-4762-8898-fe4f3d229ae5.png" height="384" width="512">
- <img src="https://user-images.githubusercontent.com/50793868/163811700-919e2546-1f08-4223-9122-8e9a6a4f7fbe.png" height="384" width="512">
+  <img src="https://user-images.githubusercontent.com/50793868/163811700-919e2546-1f08-4223-9122-8e9a6a4f7fbe.png" height="384" width="512">
+  <img src="https://user-images.githubusercontent.com/50793868/163811698-51125d09-e7bf-4762-8898-fe4f3d229ae5.png" height="384" width="512">
 
  Nombre de survivants: 11
 
