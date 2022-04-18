@@ -4,11 +4,15 @@ from datetime import datetime
 
 pygame.init()
 
+###################################
+#### Variables gérant le modèle ###
+###################################
+
 WINDOW_RESOLUTION = (900, 900)
 NB_POPULATION = 400
 
-TAUX_MORTALITE = 90
-TAUX_INFECTION = 70
+TAUX_MORTALITE = 50
+TAUX_INFECTION = 50
 
 
 TEMPS_INFECTION_MAX = 25
@@ -17,11 +21,11 @@ TEMPS_IMMUNITE_MAX = 25
 NOMBRE_INFECTE_DEBUT = 5
 DISTANCE_CONTAMINATION = 50
 
+###################################
 
-
-nb_mort = 0
 nb_infecte = NOMBRE_INFECTE_DEBUT
-screen = pygame.display.set_mode(WINDOW_RESOLUTION)
+nb_mort = 0
+fenetre = pygame.display.set_mode(WINDOW_RESOLUTION)
 pygame.display.set_caption("Propagation épidémie")
 power = True
 clock = pygame.time.Clock()
@@ -31,6 +35,18 @@ rouge = (255, 0, 0)
 bleu = (0, 0, 250)
 vert = (0, 255, 25)
 seconde = int(datetime.now().strftime("%S"))
+
+# Variables gérant le menu principal
+afficher_legende = True   # Variable permettant d'afficher ou non la légende
+taille_police = 36
+police = pygame.font.Font(None,taille_police)
+titre = police.render("Légende",True,pygame.Color("Black"))
+texte1 = police.render("Individu sain",True,pygame.Color("Black"))
+texte2 = police.render("Individu immunisé",True,pygame.Color("Black"))
+texte3 = police.render("Individu contaminé",True,pygame.Color("Black"))
+texte4 = police.render("Veuillez presser une touche",True,pygame.Color("Black"))
+
+
 
 liste_agents = []
 liste_x = []
@@ -112,7 +128,6 @@ def mortalite():
                         liste_agents.remove(i)
                         NB_POPULATION -= 1
                         nb_mort += 1
-                        print(nb_mort)
         
 
             
@@ -130,7 +145,8 @@ def actualisation_coordonnees():
 # Fonction permettant d'actualiser le programme et de tracer les nouveaux points
 def actualisation():
     global seconde
-    screen.fill(blanc)
+    fenetre.fill(blanc)
+    # On actualise les coordonnées et l'état des agents toutes les secondes environ
     if ((int(datetime.now().strftime("%S")) - seconde >= 1) or (int(datetime.now().strftime("%S")) - seconde < 0)):
         seconde = int(datetime.now().strftime("%S"))
         contamination()
@@ -144,8 +160,9 @@ def actualisation():
             point_couleur = vert
         else:
             point_couleur = bleu
-        pygame.draw.circle(screen, point_couleur, (int(liste_x[i]), int(liste_y[i])), 5)
+        pygame.draw.circle(fenetre, point_couleur, (int(liste_x[i]), int(liste_y[i])), 5)
 
+# Fonction permettant de mettre fin au programme si toute la population a disparu ou si le virus a disparu
 def test_fin():
     global nb_mort, nb_infecte
     if NB_POPULATION == 0:
@@ -158,8 +175,32 @@ def test_fin():
         return 0
     return 1
 
+
+# Fonction permettant d'afficher le menu principal contenant la légende
+def menu_principal():
+    global power, afficher_legende, taille_police
+    while afficher_legende:
+        fenetre.fill(blanc)
+        fenetre.blit(titre, (int(WINDOW_RESOLUTION[0]/2.3), int(WINDOW_RESOLUTION[1]/10)))
+        fenetre.blit(texte1, (int(WINDOW_RESOLUTION[0]/2), int(WINDOW_RESOLUTION[1]/3)))
+        fenetre.blit(texte2, (int(WINDOW_RESOLUTION[0]/2), int(WINDOW_RESOLUTION[1]/3)+2*taille_police))
+        fenetre.blit(texte3, (int(WINDOW_RESOLUTION[0]/2), int(WINDOW_RESOLUTION[1]/3)+4*taille_police))
+        fenetre.blit(texte4, (int(WINDOW_RESOLUTION[0]/3), int(WINDOW_RESOLUTION[1]/1.1)))
+        pygame.draw.circle(fenetre, bleu, (int(WINDOW_RESOLUTION[0]/2.2), int(WINDOW_RESOLUTION[1]/2.9)), 8)
+        pygame.draw.circle(fenetre, vert, (int(WINDOW_RESOLUTION[0]/2.2), int(WINDOW_RESOLUTION[1]/2.9)+2*taille_police), 8)
+        pygame.draw.circle(fenetre, rouge, (int(WINDOW_RESOLUTION[0]/2.2), int(WINDOW_RESOLUTION[1]/2.9)+4*taille_police), 8)
+        pygame.display.flip()
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                afficher_legende = False
+            if event.type == pygame.QUIT:
+                afficher_legende = False
+                power = False
+
+# Fonction principale gérant le programme
 def main():
     global power
+    menu_principal()
     initialisation_population()
     while power:
         actualisation()
